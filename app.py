@@ -3,7 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import html
-import re
 
 app = Flask(__name__)
 
@@ -35,7 +34,7 @@ def getIFSCDetails():
         district = anchors[2].get_text()
         branch = anchors[4].get_text()
         MICR = anchors[6].get_text()
-        print(mainDiv[2].get_text())
+        # print(mainDiv[2].get_text())
 
         jsonResponse = {
             "IFSC Code": IFSC,
