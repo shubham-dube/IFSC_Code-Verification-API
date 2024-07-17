@@ -45,7 +45,7 @@ This API fetches IFSC Code Details in JSON format
   
 ## EndPoints
 
-### Fetching Captcha
+### Fetching IFSC Code Details
 
 **Endpoint:** `/api/v1/getIFSCDetails`
 
