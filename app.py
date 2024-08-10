@@ -3,8 +3,10 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import html
+from asgiref.wsgi import WsgiToAsgi
 
 app = Flask(__name__)
+asgi_app = WsgiToAsgi(app)
 
 @app.route("/api/v1/getIFSCDetails", methods=["POST"])
 def getIFSCDetails():
@@ -57,4 +59,5 @@ def getIFSCDetails():
 
 
 if __name__ == "__main__":
-    app.run()
+    import uvicorn
+    uvicorn.run(asgi_app, host='0.0.0.0', port=5001)
