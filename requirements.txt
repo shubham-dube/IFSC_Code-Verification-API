@@ -1,6 +1,5 @@
 flask
 requests
 bs4
-uuid
 asgiref
 uvicorn
